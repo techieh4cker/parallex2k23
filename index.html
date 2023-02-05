@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport">
+  <title>Parallax2k23-IET</title>
+  <link rel="icon" href="favicon.png">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+  <style>
+    html{
+      scroll-behavior: smooth;
+    }
+    .dropbtn {
+      background-color:black;
+      cursor: pointer;
+      color: rgb(238, 255, 0);
+      margin-left: 334%;
+      align-items:initial;
+      padding: 25px;
+      font-size: 20px;
+      border: none;
+    }
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }    
+    .dropdown-content {
+      margin-left: 222%;
+      text-align: center;
+      display: none;
+      position: absolute;
+      background-color: black;
+      min-width: 160px;
+      z-index: 1;
+      padding-left: 0px;
+      border-radius: 10px;
+    }    
+    .dropdown-content a {
+      border: 2px solid  rgb(34, 255, 0);
+      color: rgb(34, 255, 0);
+      width: 290px;
+      font-size: 30px;
+      padding: 20px 0px;
+      text-decoration: none;
+      display: block;
+      border-radius: 6px;
+    }    
+    .dropdown-content a:hover {background-color: rgb(47, 255, 0);
+    color:black;}
+        .dropdown:hover .dropdown-content {display: block;}
+        .dropdown:hover .dropbtn {border-radius: 6px;background-color: black;}
+        
+  #preloader {
+  height: 100vh;
+  background: url(l.gif)no-repeat center center;
+  background-size: 80%;
+  width: 100vw;
+  font-family: Helvetica;
+  position: fixed;
+  background-color: #000000;
+  z-index: 100;
+}
+#h1{
+  font-size: 200%;
+  color: rgb(51, 255, 0);
+  margin-top: 300px;
+  margin-left: 45%;
+}    
+    </style>
+    <script>
+      var countDownDate = new Date("feb 15, 2023 9:0:0").getTime();
+var x = setInterval(function() {
+  var now = new Date().getTime();
+  var distance = countDownDate - now;
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  }
+}, 1000);
+
+</script>
+</head>
+<body>
+  <div id="preloader">
+    <h3  id="h1">Loading ....</h3>
+  </div>
+<script>
+        const countEl = document.getElementById('count');
+    updateVisitCount();
+    function updateVisitCount() {
+  fetch('https://api.countapi.xyz/update/karthi/techie/?amount=1')
+  .then(res => res.json())
+  .then(res => {
+countEl.innerHTML = res.value;
+  })
+    }
+</script>
+<div id="header">
+  <img id="logo" src="iet.png" height="70" alt="logo">
+  <div>
+  </div><div class="dropdown">
+    <button class="dropbtn"><img src="menu.png" height="77" > </button>
+    <div class="dropdown-content">
+      <a href="#event">TECH</a>
+      <a href="#nontech">NON-TECH</a>
+      <a href="#foot">CONTACT</a>
+    </div>
+  </div>
+</div>
+<div style="background-color: #0a0a0a;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    white-space:initial;
+    position: relative;">
+  <video height="100%" width="100%" loop autoplay muted>
+  <source src="s.mp4">
+</video>
+</div>
+<p id="blink">
+  KONGU ENGINEERING COLLEGE presents
+</p>
+<figure>
+	<h1 color="green">Parallax'2k23</h1>
+  <h1 color="green">Parallax'2k23</h1>
+  <h1 color="green">Parallax'2k23</h1>
+  <h1 color="green">Parallax'2k23</h1>
+  <h1 color="green">Parallax'2k23</h1>
+  <h1 color="green">Parallax'2k23</h1>
+  <h1 color="green">Parallax'2k23</h1>
+  <h1 color="green">Parallax'2k23</h1>
+  <h1 color="green">Parallax'2k23</h1>
+  <h1 color="green">Parallax'2k23</h1>
+</figure>
+  <p id="demo"></p>
+  <script src="script.js"></script>
+  <div id="up">
+    <div id="tech">
+     <img id="event" src="tech.webp">
+      <h3 style="margin-top: 1%;">TECHNICAL </h3>
+      <p id="technote">Imagination is more important than knowledge.  
+        For knowledge is limited, whereas imagination embraces the entire world, 
+        stimulating progress, giving birth to evolution<span style="color:red"> - Albert Einstein<span></span></p>
+        <a id="techbtn" href="tech.html">Explore more</a><br><br>
+    </div>
+  </div>
+  <div id="down">
+    <div id="nontech">
+      <img id="event" style="border-radius: 0px 100px;" src="nontech.webp">
+      <h3 style="margin-top: 1%;">NON-TECHNICAL </h3>
+      <p id="technote"> People read into the music. I have a feeling that they can believe that 
+        I'm trying to put some emotion forward. It's not just some technical exercise <span  style="color:red">- Kieran Hebden<span></span></p>
+        <a id="techbtn" href="nontech.html">Explore more</a><br><br>
+    </div>
+  </div>
+  <div id="footer">
+    
+  <div id="contact">
+    <h3 style="color: rgb(0, 255, 0);">CONTACT US</h3>
+  </div>
+  <div id="foot">
+    <div>
+     <a href="https://instagram.com/iet_oncampus_kec?igshid=YmMyMTA2M2Y="> <img src="insta.png" height="200"> </a>
+      <p>@iet_oncampus_kec</p>
+    </div>
+    <div>
+    <a href="mailto:Parallax2k22.iet@gmail.com"> <img src="email.png" height="200"> </a>
+      <p>Parallax2k22.iet@gmail.com</p>
+    </div>
+    <div id="phone">
+    <a href="wa.me/+919790299559"> <img src="phone.png" height="200"> </a>
+      <p>+91 98947 07815</p>
+      <p>+91 97902 99559</p>
+    </div>
+  </div>
+  <div id="kec">
+    <img src="kec.png" height="100">
+    <h3>Kongu Engineering College <span  style="color:red">(Autonomous)</span></h3>
+    <h3>Affilicated to Anna University | Accredited by A++ Grade</h3>
+    <h3>Mobile: 9965277765 / 9443020583</h3>
+    <h3>Department of Electrical and Electronics Engineering</h3>
+    <iframe style="border-radius: 20px;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d489.1030742944539!2d77.60721742078125!3d11.274300976847822!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba96d124ec91953%3A0x5f2f1bbd14bc8303!2sDepartment%20of%20electrical%20sciences!5e0!3m2!1sen!2sin!4v1675512423795!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <a href="#logo" style="scroll-behavior: smooth; cursor: pointer; margin-right: -15%;">
+      <img src="scroll.png" height="100">
+    </a>
+  </div>
+</div>
+  <div id="karthi">
+   <h3>Developed by <a href="https://instagram.com/0xkarthi?igshid=YmMyMTA2M2Y=">KARTHIKEYAN K</a></h3>
+   Copyright &copy;2023
+   <h5 id="count"></h5>
+
+
+<script>
+  var load=document.getElementById("preloader");
+  window.addEventListener("load", function(){
+    load.style.display="none";
+  })
+</script>
+</body>
+</html>
